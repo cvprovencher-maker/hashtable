@@ -59,12 +59,12 @@ class HashTable:
             current = self.data[index]
             while current:
                 if current.key == key:
-                    current.value.number = number  # Update duplicate key
+                    current.value.number = number  
                     return
                 if current.next is None:
                     break
                 current = current.next
-            current.next = new_node  # Insert at end of linked list
+            current.next = new_node  
 
     def search(self, key):
         index = self.hash_function(key)
@@ -87,7 +87,6 @@ class HashTable:
                     current = current.next
             print(output)
 
-# Test your hash table implementation here. 
 if __name__ == "__main__":
     table = HashTable(10)
     table.print_table()
